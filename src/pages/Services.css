@@ -1,0 +1,1480 @@
+
+/* ======================================
+   LUBESON SERVICES - SHARED STYLES
+====================================== */
+
+.lb-services-page {
+  --lb-s-dark: #202124;
+  --lb-s-red: #a82028;
+  --lb-s-red-hover: #c02b34;
+  --lb-s-muted: #74767c;
+  --lb-s-border: #e6e6e8;
+  --lb-s-light: #f5f5f4;
+
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: var(--lb-s-dark);
+  font-family: inherit;
+}
+
+.lb-services-page *,
+.lb-services-page *::before,
+.lb-services-page *::after {
+  box-sizing: border-box;
+}
+
+.lb-services-container {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.lb-services-page a {
+  text-decoration: none;
+}
+
+.lb-services-kicker {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--lb-s-red);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.lb-services-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 23px;
+  color: #f2b0b4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+}
+
+.lb-services-eyebrow > span {
+  width: 32px;
+  height: 2px;
+  flex: 0 0 32px;
+  background: #d4424a;
+}
+
+.lb-services-main-btn {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 22px;
+  border: 0;
+  background: var(--lb-s-red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.lb-services-main-btn:hover {
+  background: var(--lb-s-red-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ======================================
+   OVERVIEW HERO
+====================================== */
+
+.lb-services-overview-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 520px;
+  background: var(--lb-s-dark);
+  color: #fff;
+}
+
+.lb-services-overview-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(20, 21, 23, 0.96) 0%,
+      rgba(20, 21, 23, 0.82) 48%,
+      rgba(20, 21, 23, 0.32) 100%
+    ),
+    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.lb-services-overview-content {
+  padding-block: 85px;
+}
+
+.lb-services-overview-content h1,
+.lb-service-detail-content h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -2.5px;
+}
+
+.lb-services-overview-content h1 span,
+.lb-service-detail-content h1 span {
+  color: #d94a53;
+}
+
+.lb-services-overview-content > p {
+  max-width: 580px;
+  margin: 25px 0 30px;
+  color: #d4d4d6;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+/* ======================================
+   OVERVIEW CARDS
+====================================== */
+
+.lb-services-overview-section {
+  padding: 90px 0;
+}
+
+.lb-services-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+
+.lb-services-section-heading h2,
+.lb-service-detail-heading h2,
+.lb-service-benefits-heading h2 {
+  margin: 0;
+  color: var(--lb-s-dark);
+  font-size: clamp(32px, 4vw, 45px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.4px;
+}
+
+.lb-services-section-heading h2 span,
+.lb-service-detail-heading h2 span,
+.lb-service-benefits-heading h2 span {
+  color: var(--lb-s-red);
+}
+
+.lb-services-section-heading > p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--lb-s-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.lb-services-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.lb-services-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--lb-s-border);
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.lb-services-card:hover {
+  transform: translateY(-6px);
+  border-color: #d7b0b2;
+  box-shadow: 0 18px 45px rgba(30, 30, 30, 0.09);
+}
+
+.lb-services-card-image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #d9d9d9;
+}
+
+.lb-services-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.lb-services-card:hover .lb-services-card-image img {
+  transform: scale(1.05);
+}
+
+.lb-services-card-number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  background: var(--lb-s-red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.lb-services-card-content {
+  position: relative;
+  padding: 28px 24px 25px;
+}
+
+.lb-services-card-icon {
+  position: absolute;
+  top: -27px;
+  right: 22px;
+  width: 53px;
+  height: 53px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border: 1px solid var(--lb-s-border);
+  color: var(--lb-s-red);
+}
+
+.lb-services-card-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--lb-s-red);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.lb-services-card-content h3 {
+  margin: 0 0 12px;
+  color: var(--lb-s-dark);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.lb-services-card-content > p {
+  min-height: 93px;
+  margin: 0 0 22px;
+  color: var(--lb-s-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.lb-services-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 17px;
+  border-top: 1px solid var(--lb-s-border);
+  color: var(--lb-s-red);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.lb-services-card-link svg {
+  transition: transform 0.2s ease;
+}
+
+.lb-services-card-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* ======================================
+   BENEFITS
+====================================== */
+
+.lb-services-benefits-section,
+.lb-service-benefits-section {
+  padding: 55px 0;
+  background: var(--lb-s-light);
+}
+
+.lb-services-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.lb-services-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-width: 0;
+}
+
+.lb-services-benefit > svg {
+  flex: 0 0 25px;
+  color: var(--lb-s-red);
+}
+
+.lb-services-benefit h3 {
+  margin: 0 0 9px;
+  color: var(--lb-s-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.lb-services-benefit p {
+  margin: 0;
+  color: var(--lb-s-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ======================================
+   INDIVIDUAL SERVICE HERO
+====================================== */
+/* INDIVIDUAL SERVICE HERO */
+.lb-service-detail-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 450px;
+  height: 450px;
+  overflow: hidden;
+  background: #17191c;
+  color: #fff;
+}
+
+/* Full-width background image */
+.lb-service-detail-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 45%;
+  background-repeat: no-repeat;
+}
+
+/* Dark shade behind the text */
+.lb-service-detail-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 21, 23, 0.96) 0%,
+    rgba(20, 21, 23, 0.88) 36%,
+    rgba(20, 21, 23, 0.55) 60%,
+    rgba(20, 21, 23, 0.12) 100%
+  );
+}
+
+/* Text content */
+.lb-service-detail-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.lb-service-detail-content h1 {
+  max-width: 650px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.08;
+}
+
+.lb-service-detail-content h1 span {
+  color: #e34b54;
+}
+
+.lb-service-detail-content > h2 {
+  margin: 14px 0 0;
+  color: #f1b6ba;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.lb-service-detail-content > p {
+  max-width: 560px;
+  margin: 14px 0 22px;
+  color: #f0f0f0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Responsive banner */
+@media (max-width: 768px) {
+  .lb-service-detail-hero {
+    height: auto;
+    min-height: 450px;
+  }
+
+  .lb-service-detail-image {
+    background-position: center;
+  }
+
+  .lb-service-detail-hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 21, 23, 0.92),
+      rgba(20, 21, 23, 0.65)
+    );
+  }
+
+  .lb-service-detail-content {
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
+
+  .lb-service-breadcrumb {
+    margin-bottom: 25px;
+  }
+
+  .lb-service-detail-number {
+    top: 85px;
+    right: 0;
+    font-size: 38px;
+  }
+
+  .lb-service-detail-content h1 {
+    font-size: clamp(38px, 9vw, 52px);
+  }
+}
+/* Mobile banner */
+@media (max-width: 600px) {
+  .lb-service-detail-hero {
+    height: 450px;
+    min-height: 450px;
+    max-height: 450px;
+  }
+
+  .lb-service-detail-content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+
+.lb-service-detail-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.lb-service-detail-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 21, 23, 0.97) 0%,
+    rgba(20, 21, 23, 0.86) 50%,
+    rgba(20, 21, 23, 0.36) 100%
+  );
+}
+
+.lb-service-detail-content {
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 75px;
+}
+
+.lb-service-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 43px;
+  color: #d1d1d3;
+  font-size: 11px;
+}
+
+.lb-service-breadcrumb a {
+  color: #fff;
+}
+
+.lb-service-breadcrumb a:hover {
+  color: #e05a62;
+}
+
+.lb-service-breadcrumb > span:last-child {
+  color: #f0a9ad;
+}
+
+.lb-service-detail-number {
+  position: absolute;
+  top: 95px;
+  right: 0;
+  color: rgba(255, 255, 255, 0.22);
+  font-size: clamp(45px, 7vw, 95px);
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.lb-service-detail-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  background: var(--lb-s-red);
+  color: #fff;
+}
+
+.lb-service-detail-content h1 {
+  font-size: clamp(45px, 5.5vw, 68px);
+}
+
+.lb-service-detail-content > h2 {
+  margin: 18px 0 0;
+  color: #f1b6ba;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.lb-service-detail-content > p {
+  max-width: 600px;
+  margin: 17px 0 28px;
+  color: #d2d2d5;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ======================================
+   INDIVIDUAL SERVICE BODY
+====================================== */
+
+.lb-service-detail-body {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.lb-service-detail-heading {
+  max-width: 700px;
+  margin-bottom: 42px;
+}
+
+.lb-service-detail-heading > p {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: var(--lb-s-muted);
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+.lb-service-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.lb-service-feature {
+  position: relative;
+  min-width: 0;
+  padding: 30px 25px;
+  border: 1px solid var(--lb-s-border);
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.lb-service-feature:hover {
+  transform: translateY(-4px);
+  border-color: #d9b5b7;
+  box-shadow: 0 14px 35px rgba(30, 30, 30, 0.055);
+}
+
+.lb-service-feature-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #e4e4e6;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.lb-service-feature-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 23px;
+  background: #f9e9ea;
+  color: var(--lb-s-red);
+}
+
+.lb-service-feature h3 {
+  margin: 0 0 12px;
+  color: var(--lb-s-dark);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.lb-service-feature p {
+  margin: 0;
+  color: var(--lb-s-muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* ======================================
+   BOTTOM CTA
+====================================== */
+
+.lb-services-bottom-cta {
+  padding: 65px 0;
+  background: var(--lb-s-dark);
+  color: #fff;
+}
+
+.lb-services-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.lb-services-cta-inner h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(29px, 4vw, 43px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+.lb-services-cta-inner h2 span {
+  color: #dc535b;
+}
+
+.lb-services-cta-inner p {
+  margin: 13px 0 0;
+  color: #c8c8ca;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.lb-services-cta-inner .lb-services-kicker {
+  color: #f1a5a9;
+}
+
+/* ======================================
+   TABLET
+====================================== */
+
+@media (max-width: 900px) {
+  .lb-services-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lb-services-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .lb-services-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .lb-service-features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lb-service-detail-number {
+    top: 115px;
+  }
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+  .lb-services-container {
+    width: calc(100% - 36px);
+  }
+
+  .lb-services-overview-hero {
+    min-height: 470px;
+  }
+
+  .lb-services-overview-image {
+    background-position: 60% center;
+  }
+
+  .lb-services-overview-content {
+    padding-block: 65px;
+  }
+
+  .lb-services-overview-content h1,
+  .lb-service-detail-content h1 {
+    font-size: clamp(39px, 10vw, 54px);
+    letter-spacing: -1.8px;
+  }
+
+  .lb-services-overview-content > p {
+    font-size: 13px;
+  }
+
+  .lb-services-overview-section,
+  .lb-service-detail-body {
+    padding: 62px 0;
+  }
+
+  .lb-services-section-heading h2,
+  .lb-service-detail-heading h2,
+  .lb-service-benefits-heading h2 {
+    font-size: 33px;
+  }
+
+  .lb-services-card-grid,
+  .lb-service-features-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lb-services-card-image {
+    height: 210px;
+  }
+
+  .lb-services-card-content > p {
+    min-height: 0;
+  }
+
+  .lb-service-detail-hero {
+    min-height: 530px;
+  }
+
+  .lb-service-detail-content {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+  .lb-service-breadcrumb {
+    gap: 7px;
+    margin-bottom: 35px;
+    font-size: 10px;
+  }
+
+  .lb-service-detail-number {
+    top: 100px;
+    right: 0;
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .lb-service-detail-content > h2 {
+    font-size: 15px;
+  }
+
+  .lb-service-detail-content > p {
+    font-size: 13px;
+  }
+
+  .lb-services-benefits-section,
+  .lb-service-benefits-section {
+    padding: 45px 0;
+  }
+
+  .lb-services-bottom-cta {
+    padding: 48px 0;
+  }
+
+  .lb-services-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .lb-services-cta-inner h2 {
+    font-size: 32px;
+  }
+
+  .lb-services-cta-inner .lb-services-main-btn {
+    width: 100%;
+  }
+}
+/* SERVICES PAGE BANNER - FORCE HEIGHT */
+.services-hero,
+.service-hero,
+.services-banner,
+.service-banner {
+  height: 450px !important;
+  min-height: 450px !important;
+  max-height: 450px !important;
+  overflow: hidden !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Dark shade behind banner text */
+.services-hero::before,
+.service-hero::before,
+.services-banner::before,
+.service-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 23, 26, 0.85),
+    rgba(20, 23, 26, 0.55),
+    rgba(20, 23, 26, 0.12)
+  );
+  pointer-events: none;
+}
+/* =====================================
+   LUBESON SERVICE HERO — FINAL OVERRIDE
+===================================== */
+
+.service-hero,
+.services-hero,
+.service-detail-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+  min-height: 450px;
+  max-height: 450px;
+  overflow: hidden;
+  padding: 35px 56px;
+  background: linear-gradient(110deg, #202427 0%, #292d30 60%, #3c3f42 100%);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Left-side content */
+.service-hero-content,
+.services-hero-content,
+.service-detail-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 720px;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: #fff;
+}
+
+/* Hero heading */
+.service-hero h1,
+.services-hero h1,
+.service-detail-hero h1 {
+  max-width: 650px;
+  margin: 22px 0;
+  color: #fff;
+  font-size: clamp(42px, 4.2vw, 68px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+}
+
+/* Red heading highlight */
+.service-hero h1 span,
+.services-hero h1 span,
+.service-detail-hero h1 span {
+  color: #d92732;
+}
+
+/* Description */
+.service-hero p,
+.services-hero p,
+.service-detail-hero p {
+  max-width: 690px;
+  color: #e0e2e4;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Keep the hero image on the right */
+.service-hero img,
+.services-hero img,
+.service-detail-hero img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 360px;
+  max-height: 360px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Avoid oversized background numbering */
+.service-hero .service-number,
+.services-hero .service-number,
+.service-detail-hero .service-number {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  z-index: 0;
+  color: rgba(255, 255, 255, 0.06);
+  font-size: clamp(60px, 8vw, 120px);
+  font-weight: 800;
+  pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .service-hero,
+  .services-hero,
+  .service-detail-hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 450px;
+    max-height: none;
+    padding: 38px 24px;
+  }
+
+  .service-hero h1,
+  .services-hero h1,
+  .service-detail-hero h1 {
+    font-size: clamp(36px, 9vw, 48px);
+    letter-spacing: -1px;
+  }
+
+  .service-hero img,
+  .services-hero img,
+  .service-detail-hero img {
+    height: 190px;
+    max-height: 190px;
+    margin-top: 20px;
+  }
+}
+
+/* ===== LUBESON SERVICE HERO - FIX ===== */
+
+.service-hero,
+.services-hero,
+.service-detail-hero,
+.service-page-hero {
+  position: relative;
+  width: 100%;
+  height: 450px !important;
+  min-height: 450px !important;
+  max-height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #242729;
+  isolation: isolate;
+}
+
+/* Image ko right side par rakho */
+.service-hero img,
+.services-hero img,
+.service-detail-hero img,
+.service-page-hero img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
+/* Text readable rahe, background dark ho */
+.service-hero::before,
+.services-hero::before,
+.service-detail-hero::before,
+.service-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    #202326 0%,
+    #202326 35%,
+    rgba(32, 35, 38, 0.95) 45%,
+    rgba(32, 35, 38, 0.45) 70%,
+    rgba(32, 35, 38, 0.05) 100%
+  );
+}
+
+.service-hero-content,
+.services-hero-content,
+.service-detail-hero-content,
+.service-page-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 850px;
+  padding: 40px 55px;
+  color: #fff;
+}
+
+.service-hero h1,
+.services-hero h1,
+.service-detail-hero h1,
+.service-page-hero h1 {
+  max-width: 600px;
+  margin: 18px 0;
+  color: #fff;
+  font-size: clamp(38px, 4.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.service-hero p,
+.services-hero p,
+.service-detail-hero p,
+.service-page-hero p {
+  max-width: 650px;
+  color: #e0e2e4;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.service-hero a,
+.services-hero a,
+.service-detail-hero a,
+.service-page-hero a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 17px 28px;
+  background: #b51f2a;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .service-hero,
+  .services-hero,
+  .service-detail-hero,
+  .service-page-hero {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+
+  .service-hero img,
+  .services-hero img,
+  .service-detail-hero img,
+  .service-page-hero img {
+    width: 100%;
+    opacity: 0.4;
+    object-fit: cover;
+  }
+
+  .service-hero-content,
+  .services-hero-content,
+  .service-detail-hero-content,
+  .service-page-hero-content {
+    padding: 28px 22px;
+  }
+
+  .service-hero h1,
+  .services-hero h1,
+  .service-detail-hero h1,
+  .service-page-hero h1 {
+    font-size: 40px;
+  }
+}
+/* ===== SERVICES HERO: FIXED PREMIUM LAYOUT ===== */
+
+.service-hero {
+  position: relative;
+  width: 100%;
+  min-height: 0 !important;
+  height: 500px !important;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  background: #222629 !important;
+  isolation: isolate;
+}
+
+/* Left text area */
+.service-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 20px 45px 55px;
+  background: linear-gradient(
+    90deg,
+    #222629 0%,
+    #222629 75%,
+    rgba(34, 38, 41, 0.96) 100%
+  );
+}
+
+/* Heading */
+.service-hero h1 {
+  max-width: 560px;
+  margin: 20px 0;
+  color: #ffffff !important;
+  font-size: clamp(42px, 4.5vw, 66px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+/* Supporting text */
+.service-hero p {
+  max-width: 600px;
+  color: #e0e3e5 !important;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Right-side image */
+.service-hero-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #292d30;
+}
+
+.service-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+}
+
+/* Remove old full-banner background overlays */
+.service-hero::before,
+.service-hero::after {
+  pointer-events: none;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .service-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero-content {
+    padding: 45px 28px;
+  }
+
+  .service-hero-image {
+    height: 300px;
+  }
+
+  .service-hero h1 {
+    font-size: clamp(38px, 7vw, 54px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .service-hero-content {
+    padding: 35px 20px;
+  }
+
+  .service-hero-image {
+    height: 230px;
+  }
+
+  .service-hero h1 {
+    font-size: 38px;
+  }
+}
+/* ==========================================
+   LUBESON SERVICE BANNER — FINAL FIX
+   ========================================== */
+
+.lb-service-detail-hero {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 500px !important;
+  min-height: 500px !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  background: #222629 !important;
+  padding: 0 !important;
+}
+
+/* Image on the RIGHT side */
+.lb-service-detail-hero .lb-service-detail-image {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+
+  width: 53% !important;
+  height: 100% !important;
+
+  background-color: #222629 !important;
+  background-repeat: no-repeat !important;
+  background-position: center right !important;
+  background-size: contain !important;
+
+  z-index: 0 !important;
+  opacity: 1 !important;
+}
+
+/* Dark gradient blends the image with the background */
+.lb-service-detail-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+
+  background: linear-gradient(
+    90deg,
+    #222629 0%,
+    #222629 39%,
+    rgba(34, 38, 41, 0.97) 47%,
+    rgba(34, 38, 41, 0.55) 59%,
+    rgba(34, 38, 41, 0.03) 78%
+  ) !important;
+
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Content on the LEFT side */
+.lb-service-detail-hero .lb-service-detail-content {
+  position: relative !important;
+  z-index: 2 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+
+  padding: 35px 55px !important;
+  margin: 0 !important;
+
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* Breadcrumb */
+.lb-service-detail-hero .lb-service-breadcrumb {
+  margin-bottom: 25px !important;
+  color: #dedede !important;
+}
+
+/* Small label */
+.lb-service-detail-hero .lb-services-eyebrow {
+  color: #e34b54 !important;
+  margin-bottom: 15px !important;
+}
+
+/* Large background service number */
+.lb-service-detail-hero .lb-service-detail-number {
+  position: absolute !important;
+  top: 22px !important;
+  right: 35px !important;
+
+  color: rgba(255, 255, 255, 0.12) !important;
+  font-size: clamp(45px, 7vw, 100px) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+
+  pointer-events: none !important;
+}
+
+/* Icon */
+.lb-service-detail-hero .lb-service-detail-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 65px !important;
+  height: 65px !important;
+  margin: 0 0 20px !important;
+
+  background: #ae202b !important;
+  color: #fff !important;
+}
+
+/* Main heading */
+.lb-service-detail-hero h1 {
+  position: relative !important;
+  z-index: 3 !important;
+
+  max-width: 560px !important;
+  margin: 0 0 18px !important;
+
+  color: #fff !important;
+  font-size: clamp(42px, 4.5vw, 66px) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.5px !important;
+}
+
+.lb-service-detail-hero h1 span {
+  color: #e34b54 !important;
+}
+
+/* Subtitle */
+.lb-service-detail-hero h2 {
+  max-width: 570px !important;
+  margin: 0 0 15px !important;
+
+  color: #fff !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+/* Description */
+.lb-service-detail-hero .lb-service-detail-content > p {
+  max-width: 620px !important;
+  margin: 0 0 25px !important;
+
+  color: #e0e3e5 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+/* Enquiry button */
+.lb-service-detail-hero .lb-services-main-btn {
+  position: relative !important;
+  z-index: 3 !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 15px !important;
+
+  min-height: 55px !important;
+  padding: 0 26px !important;
+
+  background: #b3202b !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .lb-service-detail-hero {
+    height: 480px !important;
+    min-height: 480px !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-image {
+    width: 58% !important;
+    opacity: 0.85 !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-content {
+    padding: 30px !important;
+  }
+
+  .lb-service-detail-hero h1 {
+    font-size: 48px !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-content > p {
+    max-width: 500px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .lb-service-detail-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-image {
+    position: absolute !important;
+    top: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+
+    width: 100% !important;
+    height: 250px !important;
+
+    background-position: center bottom !important;
+    background-size: contain !important;
+    opacity: 0.3 !important;
+  }
+
+  .lb-service-detail-hero::before {
+    background: linear-gradient(
+      180deg,
+      #222629 0%,
+      rgba(34, 38, 41, 0.98) 48%,
+      rgba(34, 38, 41, 0.55) 100%
+    ) !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-content {
+    min-height: 540px !important;
+    height: auto !important;
+    padding: 30px 22px 40px !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-number {
+    top: 20px !important;
+    right: 15px !important;
+    font-size: 43px !important;
+  }
+
+  .lb-service-detail-hero h1 {
+    font-size: 42px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .lb-service-detail-hero h2 {
+    font-size: 19px !important;
+  }
+
+  .lb-service-detail-hero .lb-service-detail-content > p {
+    font-size: 15px !important;
+  }
+}

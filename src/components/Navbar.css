@@ -1,0 +1,639 @@
+/* =========================================
+   LUBESON HEADER
+========================================= */
+
+.lubeson-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #fdfdfb;
+  border-bottom: 1px solid #dededb;
+  box-shadow: 0 5px 22px rgba(20, 22, 25, 0.07);
+}
+
+.lubeson-topbar {
+  background: #25282c;
+  color: #d8dadd;
+}
+
+.lubeson-topbar-inner {
+  width: min(1240px, 92%);
+  min-height: 34px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.lubeson-topbar-inner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lubeson-topbar-inner a:hover {
+  color: #d9a4a6;
+}
+
+/* =========================================
+   MAIN NAVBAR
+========================================= */
+
+.lubeson-navbar {
+  width: min(1240px, 92%);
+  min-height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.lubeson-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.lubeson-brand img {
+  display: block;
+  width: 145px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.lubeson-nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.lubeson-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 82px;
+  padding: 0;
+  color: #303236;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lubeson-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 17px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #a82028;
+  transition: width 0.25s ease;
+}
+
+.lubeson-nav-link:hover,
+.lubeson-nav-link.active,
+.lubeson-nav-item.dropdown-open > .lubeson-nav-link {
+  color: #a82028;
+}
+
+.lubeson-nav-link:hover::after,
+.lubeson-nav-link.active::after,
+.lubeson-nav-item.dropdown-open > .lubeson-nav-link::after {
+  width: 100%;
+}
+
+.lubeson-dropdown-trigger {
+  font-weight: 700;
+}
+
+.lubeson-chevron {
+  transition: transform 0.25s ease;
+}
+
+.lubeson-nav-item.dropdown-open .lubeson-chevron {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   NAV ITEM / DROPDOWN POSITIONING
+========================================= */
+
+.lubeson-nav-item {
+  position: static;
+  display: flex;
+  align-items: center;
+}
+
+.lubeson-mega-menu,
+.lubeson-services-menu {
+  position: absolute;
+  top: 100%;
+  background: #fdfdfb;
+  border-top: 3px solid #a82028;
+  box-shadow: 0 18px 45px rgba(20, 22, 25, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s ease;
+}
+
+.lubeson-mega-menu.show,
+.lubeson-services-menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* =========================================
+   EQUIPMENT MEGA MENU
+========================================= */
+
+.lubeson-mega-menu {
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 34px max(4%, calc((100% - 1240px) / 2));
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  column-gap: 38px;
+  row-gap: 24px;
+}
+
+.lubeson-mega-heading {
+  padding: 4px 28px 24px 0;
+  border-right: 1px solid #e7e5e1;
+}
+
+.lubeson-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #a82028;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+}
+
+.lubeson-mega-heading h3 {
+  margin: 0 0 12px;
+  color: #25282c;
+  font-size: clamp(21px, 2vw, 28px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.lubeson-mega-heading p {
+  max-width: 310px;
+  margin: 0 0 23px;
+  color: #74767a;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.lubeson-mega-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a82028;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: gap 0.2s ease;
+}
+
+.lubeson-mega-all-link:hover {
+  gap: 13px;
+}
+
+.lubeson-mega-column h4 {
+  margin: 3px 0 15px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e7e5e1;
+  color: #25282c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lubeson-equipment-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 48px;
+  padding: 7px 9px;
+  margin: 2px 0;
+  color: #45474b;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 3px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lubeson-equipment-link:hover {
+  color: #a82028;
+  background: #f4efed;
+  transform: translateX(3px);
+}
+
+.lubeson-equipment-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  color: #a82028;
+  background: #f2e9e7;
+  border-radius: 3px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.lubeson-equipment-link:hover .lubeson-equipment-icon {
+  color: #fff;
+  background: #a82028;
+}
+
+.lubeson-item-arrow {
+  margin-left: auto;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lubeson-equipment-link:hover .lubeson-item-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.lubeson-mega-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e7e5e1;
+  color: #74767a;
+  font-size: 12px;
+}
+
+.lubeson-mega-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #25282c;
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 0.2s ease;
+}
+
+.lubeson-mega-footer a:hover {
+  color: #a82028;
+}
+
+/* =========================================
+   SERVICES DROPDOWN
+========================================= */
+
+.lubeson-services-menu {
+  left: 50%;
+  width: min(440px, 92vw);
+  padding: 16px;
+  transform: translate(-50%, 10px);
+}
+
+.lubeson-services-menu.show {
+  transform: translate(-50%, 0);
+}
+
+.lubeson-service-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 10px;
+  color: #303236;
+  text-decoration: none;
+  border-bottom: 1px solid #eceae6;
+  transition: background 0.2s ease;
+}
+
+.lubeson-service-link:hover {
+  background: #f5f1ef;
+}
+
+.lubeson-service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  color: #a82028;
+  background: #f2e9e7;
+  border-radius: 3px;
+}
+
+.lubeson-service-link > span:nth-child(2) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lubeson-service-link strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.lubeson-service-link small {
+  color: #77797d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.lubeson-service-link > svg:last-child {
+  color: #a82028;
+}
+
+.lubeson-service-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 10px 5px;
+  color: #a82028;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================
+   GET A QUOTE BUTTON
+========================================= */
+
+.lubeson-quote-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 15px;
+  background: #a82028;
+  color: #fff;
+  border: 1px solid #a82028;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lubeson-quote-button:hover {
+  background: #861b22;
+  border-color: #861b22;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.lubeson-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dededb;
+  background: #fff;
+  color: #25282c;
+  padding: 9px;
+  cursor: pointer;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .lubeson-navbar {
+    gap: 18px;
+  }
+
+  .lubeson-nav {
+    gap: 15px;
+  }
+
+  .lubeson-brand img {
+    width: 125px;
+  }
+
+  .lubeson-nav-link {
+    font-size: 13px;
+  }
+
+  .lubeson-quote-button {
+    gap: 6px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .lubeson-mega-menu {
+    column-gap: 22px;
+  }
+}
+
+/* =========================================
+   MOBILE / SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .lubeson-topbar-inner {
+    min-height: 32px;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+  }
+
+  .lubeson-navbar {
+    position: relative;
+    min-height: 73px;
+  }
+
+  .lubeson-brand img {
+    width: 125px;
+    height: 58px;
+  }
+
+  .lubeson-menu-toggle {
+    display: inline-flex;
+  }
+
+  .lubeson-nav {
+    position: absolute;
+    top: 100%;
+    left: -4.35%;
+    right: -4.35%;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100vh - 105px);
+    overflow-y: auto;
+    padding: 12px 5% 22px;
+    background: #fdfdfb;
+    border-top: 1px solid #e6e6e2;
+    box-shadow: 0 15px 22px rgba(0, 0, 0, 0.1);
+  }
+
+  .lubeson-nav.is-open {
+    display: flex;
+  }
+
+  .lubeson-nav-link {
+    width: 100%;
+    min-height: 49px;
+    justify-content: space-between;
+    font-size: 15px;
+    border-bottom: 1px solid #e9e9e5;
+  }
+
+  .lubeson-nav-link::after {
+    bottom: 0;
+  }
+
+  .lubeson-nav-item {
+    display: block;
+    width: 100%;
+  }
+
+  .lubeson-dropdown-trigger {
+    text-align: left;
+  }
+
+  .lubeson-mega-menu,
+  .lubeson-services-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    padding: 18px 12px;
+    border-top: 2px solid #a82028;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .lubeson-mega-menu.show,
+  .lubeson-services-menu.show {
+    display: block;
+    transform: none;
+  }
+
+  .lubeson-mega-heading {
+    padding: 0 0 17px;
+    border-right: 0;
+    border-bottom: 1px solid #e7e5e1;
+    margin-bottom: 20px;
+  }
+
+  .lubeson-mega-heading h3 {
+    font-size: 23px;
+  }
+
+  .lubeson-mega-heading p {
+    max-width: 100%;
+  }
+
+  .lubeson-mega-menu {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .lubeson-mega-column h4 {
+    margin-top: 0;
+  }
+
+  .lubeson-mega-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 17px;
+  }
+
+  .lubeson-services-menu {
+    left: auto;
+  }
+
+  .lubeson-service-link {
+    padding: 12px 5px;
+  }
+
+  .lubeson-quote-button {
+    width: 100%;
+    min-height: 47px;
+    margin-top: 17px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .lubeson-topbar-inner {
+    width: 94%;
+    gap: 7px;
+    font-size: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .lubeson-topbar-inner a {
+    gap: 3px;
+  }
+
+  .lubeson-navbar {
+    width: 92%;
+  }
+
+  .lubeson-brand img {
+    width: 112px;
+  }
+
+  .lubeson-mega-menu {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
