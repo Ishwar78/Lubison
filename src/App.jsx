@@ -103,7 +103,8 @@
 import { Routes, Route, useLocation, Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 
-import Navbar from "./components/navbar";
+// import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
